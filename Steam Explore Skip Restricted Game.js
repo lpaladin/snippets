@@ -1,9 +1,12 @@
 // ==UserScript==
-// @name         Steam Explore Skip Restricted Game
+// @name         从Steam探索队列移除被禁游戏
+// @name:en      Steam Explore Skip Restricted Game
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  在Steam显示“您所在的国家/地区不允许看到此内容”的时候将该游戏移出队列
+// @description  在Steam显示“您所在的国家/地区不允许看到此内容”的时候将该游戏移出探索队列
+// @description:en  Remove the game out of the explore queue when Steam displays "This content is not allowed in your country"
 // @author       zhouhaoyu
+// @supportURL   https://github.com/zhouhaoyu/snippets/issues
 // @match        https://www.tampermonkey.net/installed.php?version=4.8.41&ext=dhdg&updated=true
 // @grant        none
 // @include      *://store.steampowered.com/agecheck/app/*
@@ -29,8 +32,12 @@
                 GStoreItemData.AddStoreItemDataSet = newApps => apps = newApps;
                 GStoreItemData.AddNavParams = newParams => params = newParams;
                 window.CDiscoveryQueue = function (_, q) {
-                    const id = q[0];
-                    location = "https://store.steampowered.com/app/" + id + "/" + apps.rgApps[id].name + "/?snr=" + params.discovery_queue;
+                    if (q.length == 0) {
+                        location = "https://store.steampowered.com/explore/";
+                    } else {
+                        const id = q[0];
+                        location = "https://store.steampowered.com/app/" + id + "/" + apps.rgApps[id].name + "/?snr=" + params.discovery_queue;
+                    }
                 };
                 const all = text.split('\n').map(t => t.trim());
                 const idx = all.indexOf("GStoreItemData.AddStoreItemDataSet(");
