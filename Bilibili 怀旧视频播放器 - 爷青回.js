@@ -7,7 +7,7 @@
 // @supportURL   https://github.com/zhouhaoyu/snippets/issues
 // @include      /^https:\/\/www\.bilibili\.com\/video\/[BbAa][Vv]/
 // @grant        none
-// @run-at        document-start
+// @run-at       document-start
 // ==/UserScript==
 
 (function() {
