@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Bilibili 怀旧视频播放器 - 爷青回
+// @name         Bilibili 爷青回
 // @namespace    https://github.com/zhouhaoyu/snippets
 // @version      0.1
 // @description  对Bilibili视频播放器的加载界面，去除“你感兴趣的视频都在B站”的标语，并恢复旧的抖动小电视
