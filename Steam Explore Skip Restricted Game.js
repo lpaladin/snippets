@@ -2,7 +2,7 @@
 // @name         从Steam探索队列移除被禁游戏
 // @name:en      Steam Explore Skip Restricted Game
 // @namespace    http://tampermonkey.net/
-// @version      0.2.1
+// @version      0.2.2
 // @description  在Steam显示“您所在的国家/地区不允许看到此内容”的时候将该游戏移出探索队列
 // @description:en  Remove the game out of the explore queue when Steam displays "This content is not allowed in your country"
 // @author       zhouhaoyu
