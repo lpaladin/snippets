@@ -2,12 +2,13 @@
 // @name         Bilibili 爷青回
 // @name:en      Bilibili Legacy Player Loading Screen
 // @namespace    https://github.com/zhouhaoyu/snippets
-// @version      0.2.1
+// @version      0.2.3
 // @description:en Remove new slogan of Bilibili video player, and restore the good old shaking TV
 // @description  对Bilibili视频播放器的加载界面，去除“你感兴趣的视频都在B站”的标语，并恢复旧的抖动小电视
 // @author       zhouhaoyu
 // @supportURL   https://github.com/zhouhaoyu/snippets/issues
 // @include      /^https:\/\/www\.bilibili\.com\/video\/[BbAa][Vv]/
+// @include      /^https:\/\/www\.bilibili\.com\/bangumi\/play/
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
